@@ -27,18 +27,22 @@ D1 -->|No| d[/แสดง level และ current_xp/]
 ```
 
 ---
-
 ```mermaid
 flowchart TD
-Start([Start]) 
- --> a["pos = A, dir = forward"]
+Start([Start])
+--> a["pos = A, dir = forward"]
 --> D1{ระยะถึง player < 100?}
 D1 -->|Yes| Win[/chase player/]
 --> End([End])
 D1 -->|No| Show[/เลื่อน enemy ตาม dir/]
 --> D2{ถึงจุด B?}
- -->|Yes| D["dir - กลับไป A"]
-D-->D1
+D2 -->|Yes| D["dir = กลับไป A"]
+D --> D1
+D2 -->|No| D3{ถึงจุด A?}
+D3 -->|No| D1
+D3 -->|Yes| E["dir = ไปหน้า B"]
+E --> D1
+
 
 
 
