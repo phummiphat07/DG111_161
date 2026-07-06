@@ -24,11 +24,32 @@ END
 
 BEGIN
 
-INPUT รับ a และ b
+INPUT  a,b -> a และ b
 
-IF ... THEN
-...
+IF a > b THEN
+ ...
 ELSE
-...
+ ...
 END IF
-O
+
+END
+
+---
+
+BEGIN
+
+INPUT n
+
+i = 1
+
+IF i <= N THEN
+
+ ...
+
+ELSE
+
+ i = i + 1
+
+END IF
+
+END
